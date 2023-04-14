@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a{
+    text-decoration: none;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 120px 300px auto 65px;
+    grid-template-areas:
+    "h"
+    "p"
+    "c"
+    "r";
+}
+
+header{
+    grid-area: h;
+    background-color: #1A4A5A;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+header img{
+    height: 80px;
+}
+
+.direita{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.direita > a{
+    background-color: white;
+    border-radius: 50px;
+    padding: 10px 20px; 
+    color: black;
+}
+
+.imagem{
+    grid-area: p;
+    background-image: url(imagens/netflix-1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+}
+
+.imagem > p{
+    font-size: 35px;
+    color: white;
+    font-weight: 600;
+    margin: 10px;
+}
+
+main{
+    grid-area: c;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+main > h1{
+    font-size: 40px;
+    color: black;
+}
+
+.novidades{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.novidades > a {
+    padding: 10px 20px;
+    background-color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border: 1px solid gray;
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    
+}
+
+.novidade > p{
+    font-size: 50px;
+    padding: 30px;
+    font-weight: bold;
+}
+
+main > div > p{
+    font-size: 30px;
+}
+
+.novidades > a{
+    color: black;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.card{
+    display: flex;
+    flex-direction: column;
+}
+
+.carding1 {
+   width: 300px;
+   height: 200px;
+}
+
+.carding1 img{
+    border-top-right-radius:25px;
+    border-top-left-radius: 25px;
+    width: 100%;
+    height: 100%;
+    position: center;
+    object-fit: cover;
+}
+
+
+.cardinfo{
+    width: 300px;
+    height: 106px;
+    background-color: #1A4A5A;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.cardnome{
+    color: white;
+    margin-bottom: 30px;
+    font-size: 30px;
+}
+
+footer{
+    grid-area: r;
+    background-color: #1A4A5A;
+    display: flex;
+    align-items: center;
+    padding: 40px;
+}
+
+footer > ul{
+    list-style: none;
+}
+footer ul li a{
+    text-transform: uppercase;
+    color: white;
+}
+
+div > a{
+    color: white;
+}
+
+/*.Tela Cadastro.*/
+
+
