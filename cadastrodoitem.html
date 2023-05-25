@@ -17,18 +17,21 @@
 
         <section>
             <h1>Cadastro do item</h1>
-            <form action="catalogo.html">
-                <label for="">Nome do título:</label>
-                <input type="text1">
-                <label for="">Resumo:</label>
-                <input type="text2">
+            <form>
+                <label for="nome">Nome do título:</label>
+                <input type="text" name="nome" id="nome">
+                <label for="descricao">Resumo:</label>
+                <textarea name="descricao" id="descricao"></textarea>
+                <label for="foto">Foto</label>
+                <input type="file" name="foto" id="foto">
                 <br>
                 <br>
                 <br>
                 <br>
                 <div class="formbtn">
-                    <input type="submit" value="Cadastrar">
+                    <input type="submit" value="Cadastrar" id="botao">
                 </div>
+
                 
             </form>
         </section>
@@ -36,5 +39,6 @@
         <footer></footer>
 
     </div>
+    <script src="cadastrodoitem.js"></script>
 </body>
 </html>

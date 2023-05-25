@@ -140,22 +140,23 @@ main > h1{
 }
 
 .cardinfo{
-    width: 302px;
-    height: 106px;
     background-color: #1A4A5A;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -5px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
+    padding: 10px;
+    color: white;
+    font-size: 1.2rem;
 }
 
 .cardnome{
     color: white;
-    margin-bottom: 30px;
     font-size: 25px;
+    background-color: #1A4A5A;
+    text-align: center;
+    padding: 10px;
 }
 
 div[class="cardnome"] > a{
