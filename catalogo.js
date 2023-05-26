@@ -22,7 +22,7 @@ function carregarCatalogo(){
         ${elemento.descricao}
         </p>
         </div>
-        <div class="cardinfo"><a onclick="editar(${indice})">editar</a> | 
+        <div class="cardinfo"><a onclick="editar(${indice})">editar<a> | 
         <a onclick="excluir(${indice})">excluir</a></div>
         </div>`;
         
@@ -40,4 +40,9 @@ function excluir(indice){
       window.location.reload();
   }
  
+}
+
+function editar(indice){
+    var url ="cadastrodoitem.html?peditar=true&indice="+ encodeURIComponent(indice);
+    window.location.href = url;
 }

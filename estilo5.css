@@ -94,6 +94,7 @@ main{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    min-height: 85vh;
 
 }
 
@@ -184,6 +185,11 @@ main > input, main > div > input{
     border-radius: 20px;
     width: 450px;
     height: 70px;
+}
+
+.cardnome > p{
+    font-size: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .formbtn{

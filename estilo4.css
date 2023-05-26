@@ -71,14 +71,29 @@ form > label{
 form > input, form > div > input{
     font-size: 2rem;
     background-color: #D9D9D9;
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 20px;
     width: 450px;
     height: 70px;
 }
 
+form > div > input{
+    color: white;
+}
+
+
+textarea{
+    font-size: 2rem;
+    background-color: #D9D9D9;
+    color: black;
+    border-radius: 20px;
+}
+
+
+
 form > input:focus{
     background-color: #a09f9f;
+    color: black;
 }
 
 form > label{
