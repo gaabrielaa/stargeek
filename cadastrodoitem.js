@@ -3,6 +3,9 @@ const descricao = document.getElementById("descricao");
 const foto = document.getElementById("foto");
 const botaocadastrar = document.querySelector("#botao");
 
+var emaillogado;
+femailLogado();
+
 
 var url = new URL(window.location.href);
 var peditar = url.searchParams.get("peditar");
@@ -23,7 +26,8 @@ botaocadastrar.onclick = (evento)=>{
         {
             nome : nome.value,
             descricao : descricao.value,
-            foto : nomeArq
+            foto : nomeArq,
+            email: emaillogado
         }
     )
     localStorage.setItem("catalogo", JSON.stringify(dados));
@@ -74,6 +78,7 @@ function salvaEdicao(pfoto){
   dados[pindice].nome = nome.value;
   dados[pindice].descricao = descricao.value;
   dados[pindice].foto = pfoto;
+  dados[pindice].email = emaillogado;
   localStorage.setItem("catalogo", JSON.stringify(dados));
   window.location.assign("catalogo.html")
 
@@ -106,5 +111,14 @@ async function fenvio(){
     catch (error){
         console.error(error);
         return false; 
+    }
+}
+
+function femailLogado(){
+    let dados = sessionStorage.getItem("logado");
+    if (dados == null){
+        window.location.assign("login.html");
+    } else{
+        emaillogado = dados;
     }
 }

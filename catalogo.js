@@ -1,7 +1,7 @@
-
 const cards = document.querySelector(".cards");
 
-
+var emaillogado;
+femailLogado();
 
 carregarCatalogo();
 function carregarCatalogo(){
@@ -14,6 +14,7 @@ function carregarCatalogo(){
     }
 
     dados.forEach((elemento, indice) => {
+        if(elemento.email == emaillogado){
         let divcard = document.createElement("div");
         divcard.setAttribute("class", "card");
         divcard.innerHTML = `<div class="carding1"><img src="img/${elemento.foto}"> </div>
@@ -27,6 +28,7 @@ function carregarCatalogo(){
         </div>`;
         
         cards.appendChild(divcard);
+    }
         
     });
 }
@@ -45,4 +47,13 @@ function excluir(indice){
 function editar(indice){
     var url ="cadastrodoitem.html?peditar=true&indice="+ encodeURIComponent(indice);
     window.location.href = url;
+}
+
+function femailLogado(){
+    let dados = sessionStorage.getItem("logado");
+    if (dados == null){
+        window.location.assign("login.html");
+    } else{
+        emaillogado = dados;
+    }
 }

@@ -68,7 +68,7 @@ header img{
 
 main{
     grid-area: c;
-    padding: 20px;
+    padding: 22px;
     display: flex;
     flex-direction: column;
     justify-content: center;
